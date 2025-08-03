@@ -1,6 +1,12 @@
-import Image from "next/image";
+import { createClient } from '@/utils/supabase/server';
 
-export default function Home() {
+
+
+export default async function Home() {
+      const supabase = await createClient();
+      const { data, error } = await supabase
+        .from('frontpage section content')
+        .select()
   return (
     <>
     <div>
@@ -38,34 +44,13 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <section>
-        <h2>Webudvikling Cases</h2>
-        <p>I løbet af uddannelsen til Webudvikler har jeg gennem flere cases lært hvordan hjemmesider opsættes, samt hvordan man kan gøre brug af databaser.<br /><br />
-        Cases vist til venstre er eksempler på det jeg har været med til at udarbejde.</p>
-      </section>
-      <section>
-        <h2>Multimediedesigner Cases</h2>
-        <p>I løbet af de fire semestre som jeg studeret på IBA (International Business Academy) i Kolding har jeg været med til at lave flere cases.<br /><br />
-        Cases vist til venstre er eksempler på det jeg har været med til at udarbejde.</p>
-      </section>
-      <section>
-        <h2>Kodning</h2>
-        <p>Kodning startede som en lille interesse, som er groet større med tiden.<br /><br />
-        Jeg har i dag viden inden for</p>
-        <ul>
-          <li>HTML, CSS og Javascript</li>
-          <li>Vue.js</li>
-          <li>React.js og Next.js</li>
-          <li>Express og pug </li>
-          <li>MongoDB</li>
-        </ul>  
-        <p>Eksemplerne til venstre er sider og produktet, som jeg har kodet og opsat med de nævnte programmer.</p>
-      </section>
-      <section>
-        <h2>Adobe Programer</h2>
-        <p>Af de værktøjer vi gør brug af, så er dem jeg har mest erfaring med nogle af de forskellige adobe programmer. Specifikt har jeg en god erfaring i at bruge Photoshop, Illustrator, After effects og premiere pro.<br /><br />
-          Eksemplerne til venstre er produkter, som jeg har lavet i de forskellige programmer.</p>
-      </section>
+      {data?.map((test) => (
+        <section key={test.id}>
+          <h2>{test.Title}</h2>
+          {test.Text}
+        </section>
+      ))}
+      <pre>{JSON.stringify(data, null, 2)}</pre>
     </div>
     </>
   );
