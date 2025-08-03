@@ -1,8 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --col1: #2B353E;
+  --col2: #4E434F;
+  --col3: #6FBAC3;
+  --col4: #ECECEC;
+
 }
 
 @theme inline {
@@ -20,7 +23,8 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--col2);
+  background: linear-gradient(180deg, var(--col2) 30%, var(--col1) 70%);
+  color: var(--col4);
   font-family: Arial, Helvetica, sans-serif;
 }
