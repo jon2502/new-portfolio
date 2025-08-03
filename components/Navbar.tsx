@@ -4,7 +4,7 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <header className='px-8 py-3'>
+    <header className='px-8 pt-3 pb-16'>
         <nav className="flex justify-between items-center">
             <Link href="/">
                 <Image src="/Logo.png" alt="logo" width={380} height={75} />
@@ -14,7 +14,7 @@ const Navbar = () => {
                 <span>Multimediedesigner Cases</span>
             </Link>
             <Link href="/startup/create">
-                <span>Webudvikling cases</span>
+                <span>Webudvikling Cases</span>
             </Link>
             <Link href="/startup/create">
                 <span>Adobe Programmer</span>
