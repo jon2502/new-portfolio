@@ -1,12 +1,12 @@
 import { createClient } from '@/utils/supabase/server';
-
-
+import Link from 'next/link';
 
 export default async function Home() {
       const supabase = await createClient();
-      const { data, error } = await supabase
+      const { data: content, error: section_error } = await supabase
         .from('frontpage section content')
         .select()
+      
   return (
     <>
     <div>
@@ -17,40 +17,26 @@ export default async function Home() {
       <div>
         <p>Mit navn er Jon Bjarke Sørensen, jeg er uddannet webudvikler og multimedie designer</p>
       </div>
-      <section>
-        <div>
-          <p>
-            Erfaring inden for billede redigering.
-          </p>
-        </div>
-        <div>
-          <p>
-            Erfaring inden for video redigering.
-          </p>
-        </div>
-        <div>
-          <p>
-            Erfaring inde for vektor tegnening.
-          </p>
-        </div>
-        <div>
-          <p>
-            Erfaring inden for kodning JavaScript, Vue.js, React.js og Next.js.
-          </p>
-        </div>
-        <div>
-          <p>
-            Erfaring inden for datahåndtering og databaser.
-          </p>
-        </div>
-      </section>
-      {data?.map((test) => (
-        <section key={test.id}>
-          <h2>{test.Title}</h2>
-          {test.Text}
+      {content?.map((test) => (
+        <section key={test.id} className='flex flex-col'>
+          <div>
+            <h2>{test.Title}</h2>
+          </div>
+          <div className='flex flex-row'>
+            <div>
+              <p>Test</p>
+            </div>
+            <div>
+              <div dangerouslySetInnerHTML={{__html: test.Text}}/>
+              <button>
+                <Link href={test.Link}>
+                    <span>Text</span>
+                </Link>
+              </button>
+            </div>
+          </div>
         </section>
       ))}
-      <pre>{JSON.stringify(data, null, 2)}</pre>
     </div>
     </>
   );

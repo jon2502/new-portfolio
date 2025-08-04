@@ -16,6 +16,12 @@
   --font-mono: var(--font-geist-mono);
 }
 
+@layer base {
+  ul, ol {
+    list-style: revert;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -26,9 +32,15 @@
 body {
   background: linear-gradient(180deg, var(--col2) 30%, var(--col1) 70%);
   color: var(--col4);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
   font-size: 2.5rem;
+}
+
+button {
+  background-color: #6FBAC3;
+  width: 80px;
+  height: 40px;
+  border-radius: 3px;
 }

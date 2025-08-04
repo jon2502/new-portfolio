@@ -11,10 +11,10 @@ const Navbar = () => {
             </Link>
             <div className='flex items-center gap-5'>
             <Link href="/startup/create">
-                <span>Multimediedesigner Cases</span>
+                <span>Webudvikling Cases</span>
             </Link>
             <Link href="/startup/create">
-                <span>Webudvikling Cases</span>
+                <span>Multimediedesigner Cases</span>
             </Link>
             <Link href="/startup/create">
                 <span>Adobe Programmer</span>
