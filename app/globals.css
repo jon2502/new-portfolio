@@ -3,10 +3,10 @@
 @import "tailwindcss";
 
 :root {
-  --col1: #2B353E;
-  --col2: #4E434F;
-  --col3: #6FBAC3;
-  --col4: #ECECEC;
+  --BaseColor1: #4E434F;
+  --BaseColor2: #2B353E;
+  --DetailColor: #6FBAC3;
+  --TextColor: #ECECEC;
 }
 
 @theme inline {
@@ -30,8 +30,8 @@
 }
 
 body {
-  background: linear-gradient(180deg, var(--col2) 30%, var(--col1) 70%);
-  color: var(--col4);
+  background: linear-gradient(180deg, var(--BaseColor1) 30%, var(--BaseColor2) 70%);
+  color: var(--TextColor);
 }
 
 h1 {
