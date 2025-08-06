@@ -3,25 +3,34 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
 
-const ThreeRows = ({project}: {project:any}) => {
-  const {Title, Text, Info} = project
+type Project = {
+  id: number;
+  Program:string;
+  SetupType:string;
+  Title:string;
+  Text:string;
+  BigImage: string;
+  Info: Array<{
+    Text: string;
+    Image: string;
+    Link: string;
+  }>
+}
 
-  type Card = {
-  Text: string;
-  Image: String;
-  Link: Url
-  }
+const ThreeRows = ({project}: {project:Project}) => {
+  const {Title, Text, Info, BigImage} = project
+
   
   return (
     <section>
       <h1>{Title}</h1>
       <p>{Text}</p>
       <div>
-        {Info.map((card:Card) =>(
+        {Info.map((card) =>(
           <div key={card.Text}>
             <p>{card.Text}</p>
             {card.Image ? (
-              <Image src="/logo.png" alt="logo" width={144} height={30} />
+              <Image src={card.Image} alt="logo" width={144} height={30} />
             ):(
               null
             )}
@@ -34,9 +43,14 @@ const ThreeRows = ({project}: {project:any}) => {
             ):(
               null
             )}
-          </div>
+        </div>
         ))}
       </div>
+      {BigImage ? (
+        <Image src={BigImage} alt="logo" width={144} height={30} />
+      ):(
+        null
+      )}
     </section>
   )
 }

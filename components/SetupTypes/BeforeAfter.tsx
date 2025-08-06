@@ -1,6 +1,6 @@
 import React from 'react'
 
-const BeforeAfter = () => {
+const BeforeAfter = ({project}: {project:any}) => {
   return (
     <div>BeforeAfter</div>
   )

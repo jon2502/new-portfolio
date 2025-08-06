@@ -4,8 +4,7 @@ import ThreeRows from './SetupTypes/ThreeRows'
 import VideoWithTimeLine from './SetupTypes/VideoWithTimeLine'
 
 const ComponentSelctor = ({ project}:{project:any}) => {
-    console.log(project)
-        switch(project.SetupType) {
+    switch(project.SetupType) {
         case "BeforeAfter":
             return <BeforeAfter key={project?.id} project={project}/>
         case "ThreeRows":
