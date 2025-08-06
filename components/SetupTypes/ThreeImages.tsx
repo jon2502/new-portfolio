@@ -9,7 +9,7 @@ const ThreeImages = ({project}: {project:any}) => {
   }
   
   return (
-    <>
+    <section>
       <h1>{Title}</h1>
       <p>{Text}</p>
       <div>
@@ -19,7 +19,7 @@ const ThreeImages = ({project}: {project:any}) => {
           </div>
         ))}
       </div>
-    </>
+    </section>
   )
 }
 

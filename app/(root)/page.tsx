@@ -6,6 +6,7 @@ export default async function Home() {
       const { data: content, error: section_error } = await supabase
         .from('frontpage section content')
         .select()
+        .order('id', { ascending: true})
       
   return (
     <>

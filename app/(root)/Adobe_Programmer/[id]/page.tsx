@@ -1,4 +1,4 @@
-import ThreeImages from '@/components/SetupTypes/ThreeImages';
+import ComponentSelctor from '@/components/ComponentSelctor';
 import { createClient } from '@/utils/supabase/client';
 import React from 'react'
 
@@ -12,22 +12,11 @@ const page = async ({params}: {params: Promise<{ id:string }>}) => {
           .eq('Program', id)
           .order('id', { ascending: true})
 
-  const componentSelctor = ((project: any) => {
-    console.log(project)
-    switch(project.SetupType) {
-      case "ThreeImages":
-        return <ThreeImages key={project?.id} project={project}/>
-    }
-  })
 
   return (
     <>
     <section>
-      {data?.map((project) => (
-        <div key={project?.id}>
-          {componentSelctor(project)}
-        </div>
-      ))}
+      {data?.map((project) => (<ComponentSelctor key={project?.id} project={project}/>))}
     </section>
     </>
   )
