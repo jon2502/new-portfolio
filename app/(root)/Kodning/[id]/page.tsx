@@ -1,3 +1,4 @@
+import { createClient } from '@/utils/supabase/client';
 import React from 'react'
 
 const page = async ({params}: {params: Promise<{ id:string }>}) => {
