@@ -16,13 +16,13 @@ const Navbar = () => {
             <Link href="/Multimediedesigner_Cases">
                 <span>Multimediedesigner Cases</span>
             </Link>
-            <Link href="Adobe_Programmer">
+            <Link href="/Adobe_Programmer">
                 <span>Adobe Programmer</span>
             </Link>
-            <Link href="Kodning">
+            <Link href="/Kodning">
                 <span>Kodning</span>
             </Link>
-            <Link href="Om_Mig">
+            <Link href="/Om_Mig">
                 <span>Om Mig</span>
             </Link>
             </div>
