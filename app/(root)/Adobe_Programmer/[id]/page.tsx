@@ -1,5 +1,5 @@
 import ComponentSelctor from '@/components/ComponentSelctor';
-import { createClient } from '@/utils/supabase/client';
+import { FetchSelcet } from '@/utils/supabase/connections/FetchSelect';
 import React from 'react'
 
   type Project = {
@@ -16,22 +16,9 @@ import React from 'react'
   }>
 }
 
-  /*const res = await fetch("http://localhost:3000/api/projects")
-  const data = await res.json()
-  console.log(data)*/
-
 const page = async ({params}: {params: Promise<{ id:string }>}) => {
   const id = (await params).id
-
-  const supabase = createClient();
-
-  const { data, error } = await supabase
-          .from('Adobe projects')
-          .select()
-          .eq('Program', id)
-          .order('id', { ascending: true})
-  
-
+  const data = await FetchSelcet('Adobe projects','Program', id)
   return (
     <>
     <section>

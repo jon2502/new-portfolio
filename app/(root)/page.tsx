@@ -1,13 +1,10 @@
-import { createServerSupabaseClient } from '@/utils/supabase/client';
+
 import Link from 'next/link';
+import { FetchAll } from '@/utils/supabase/connections/fetchAll';
 
 export default async function Home() {
-      const supabase = await createServerSupabaseClient();
-      const { data: content, error: section_error } = await supabase
-        .from('frontpage section content')
-        .select()
-        .order('id', { ascending: true})
-      
+      const content = await FetchAll('frontpage section content')
+
   return (
     <>
     <div>
