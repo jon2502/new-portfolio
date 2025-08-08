@@ -1,8 +1,8 @@
-import { createClient } from '@/utils/supabase/server';
+import { createServerSupabaseClient } from '@/utils/supabase/client';
 import Link from 'next/link';
 
 export default async function Home() {
-      const supabase = await createClient();
+      const supabase = await createServerSupabaseClient();
       const { data: content, error: section_error } = await supabase
         .from('frontpage section content')
         .select()

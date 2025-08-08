@@ -25,12 +25,12 @@ const ThreeRows = ({project}: {project:Project}) => {
     <section>
       <h1>{Title}</h1>
       <p>{Text}</p>
-      <div>
+      <div className='flex max-w-[1140px] mx-auto'>
         {Info.map((card) =>(
-          <div key={card.Text}>
-            <p>{card.Text}</p>
+          <div key={card.Text} className='flex flex-col items-center w-[33%] p-[10px]'>
+            <p className='text-center mb-20'>{card.Text}</p>
             {card.Image ? (
-              <Image src={card.Image} alt="logo" width={144} height={30} />
+              <Image src={card.Image} alt="logo" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }}/>
             ):(
               null
             )}
