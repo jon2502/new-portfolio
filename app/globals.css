@@ -39,8 +39,14 @@ h1 {
 }
 
 button {
-  background-color: #6FBAC3;
+  background-color: var(--DetailColor);
+  color: var(--BaseColor2);
   width: 80px;
   height: 40px;
   border-radius: 3px;
+}
+
+button:hover {
+  transition: 0.4s;
+  color: var(--TextColor);
 }

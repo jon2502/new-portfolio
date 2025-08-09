@@ -1,7 +1,9 @@
-import { createClient } from '@/utils/supabase/client';
+
+import { FetchAll } from '@/utils/supabase/connections/fetchAll'
 import React from 'react'
 
-const page = () => {
+const page = async () => {
+  const data = await FetchAll('Adobe programs')
   return (
     <div>page</div>
   )
