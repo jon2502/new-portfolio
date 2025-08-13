@@ -15,6 +15,33 @@ export default async function Home() {
       <div>
         <p>Mit navn er Jon Bjarke Sørensen, jeg er uddannet webudvikler og multimedie designer</p>
       </div>
+      <section className='flex-between'>
+        <div>
+          <p>
+            Erfaring inden for billede redigering.
+          </p>
+        </div>
+        <div>
+          <p>
+            Erfaring inden for video redigering.
+          </p>
+        </div>
+        <div>
+          <p>
+            Erfaring inde for vektor tegnening.
+          </p>
+        </div>
+        <div>
+          <p>
+            Erfaring inden for kodning JavaScript, Vue.js, React.js og Next.js.
+          </p>
+        </div>
+        <div>
+          <p>
+            Erfaring inden for datahåndtering og databaser.
+          </p>
+        </div>
+      </section>
       {content?.map((test) => (
         <section key={test.id} className='flex flex-col'>
           <div>

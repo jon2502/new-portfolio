@@ -1,21 +1,8 @@
-import { Url } from 'next/dist/shared/lib/router/router';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
 
-type Project = {
-  id: number;
-  Program:string;
-  SetupType:string;
-  Title:string;
-  Text:string;
-  BigImage: string;
-  Info: Array<{
-    Text: string;
-    Image: string;
-    Link: string;
-  }>
-}
 
 const ThreeRows = ({project}: {project:Project}) => {
   const {Title, Text, Info, BigImage} = project

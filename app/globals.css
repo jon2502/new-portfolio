@@ -50,3 +50,7 @@ button:hover {
   transition: 0.4s;
   color: var(--TextColor);
 }
+
+@utility flex-between {
+  @apply flex flex-row bg-(--DetailColor)
+}
