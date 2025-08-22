@@ -1,5 +1,6 @@
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { FetchAll } from '@/utils/supabase/connections/fetchAll';
 
 export default async function Home() {
@@ -17,26 +18,31 @@ export default async function Home() {
       </div>
       <section className='flex-between'>
         <div>
+          <Image src="" alt="logo" width={10} height={10}/>
           <p>
             Erfaring inden for billede redigering.
           </p>
         </div>
         <div>
+          <Image src="" alt="logo" width={10} height={10}/>
           <p>
             Erfaring inden for video redigering.
           </p>
         </div>
         <div>
+          <Image src="" alt="logo" width={10} height={10}/>
           <p>
             Erfaring inde for vektor tegnening.
           </p>
         </div>
         <div>
+          <Image src="" alt="logo" width={10} height={10}/>
           <p>
             Erfaring inden for kodning JavaScript, Vue.js, React.js og Next.js.
           </p>
         </div>
         <div>
+          <Image src="" alt="logo" width={10} height={10}/>
           <p>
             Erfaring inden for datahåndtering og databaser.
           </p>
@@ -52,7 +58,17 @@ export default async function Home() {
               <p>Test</p>
             </div>
             <div>
-              <div dangerouslySetInnerHTML={{__html: test.Text}}/>
+              {test.Text.map((text: any) => (
+                text?.Attribute === "p" ? (
+                  <p>{text.Content}</p>
+                  ): text?.Attribute === "ul" ? (
+                    <ul>
+                      {text.Content.map((li:string, index: number) =>(
+                        <li key={index}>{li}</li>
+                      ))}
+                    </ul>
+                  ):(null)
+              ))}
               <button>
                 <Link href={test.Link}>
                     <span>Text</span>

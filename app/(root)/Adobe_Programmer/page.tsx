@@ -2,6 +2,7 @@
 import React from 'react'
 import { FetchAll } from '@/utils/supabase/connections/fetchAll'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const page = async () => {
 
@@ -13,26 +14,32 @@ const page = async () => {
       <p>Nedenunder kan du læse mere samt finde eksempler på hvad jeg har lavet med de forskellige programmer.</p>
       <div>
         {data.map((program)=>(
-          <div key={program.id}>
-            <div>
-
+          <section key={program.id} className='flex justify-center max-w-9/10'>
+            <div className='flex gap-[5vw]'>
+              <div>
+                <Image src={program.Image} alt={program.Title+" Logo"} width={300} height={300}/>
+              </div>
+              <div>
+                <div>
+                  <h4><strong>{program.Title}</strong></h4>
+                  <ul>
+                    {program.List.map((listelm:any)=>(
+                      <li key={listelm}>
+                        {listelm}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className='text-right'>
+                  <button>
+                    <Link href={`/Adobe_Programmer/${program.Title}`}>
+                      <span>Se eksempler</span>
+                    </Link>
+                  </button>
+                </div>
+              </div>
             </div>
-            <div>
-              <h4>{program.Title}</h4>
-              <ul>
-                {program.List.map((listelm:any)=>(
-                  <li key={listelm}>
-                    {listelm}
-                  </li>
-                ))}
-              </ul>
-              <button>
-                 <Link href={`/Adobe_Programmer/${program.Title}`}>
-                  <span>Se eksempler</span>
-                </Link>
-              </button>
-            </div>
-          </div>
+          </section>
         ))}
 
       </div>
