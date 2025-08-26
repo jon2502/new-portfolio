@@ -3,21 +3,6 @@ import { FetchSelcet } from '@/utils/supabase/connections/FetchSelect';
 import Link from 'next/link';
 import React from 'react'
 
-  type Project = {
-  id: number;
-  Program:string;
-  SetupType:string;
-  Title:string;
-  Text:string;
-  BigImage: string;
-  Info: Array<{
-    Text: string;
-    Image: string;
-    Link: string;
-    OriginalIMG: string;
-    NewIMG: string;
-  }>
-}
 
 const page = async ({params}: {params: Promise<{ id:string }>}) => {
   
