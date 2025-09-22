@@ -59,11 +59,11 @@ export default async function Home() {
                   <Accordion images={test.images}/>
                 </div>
                 <div className='flex flex-col'>
-                  {test.Text.map((text: {Attribute:string, Content:string[], index: number }) => (
+                  {test.Text.map((text: {Attribute:string, Index:number, Content:string[]}) => (
                     text?.Attribute === "p" ? (
-                      <p key={text.index}> {text.Content}</p>
+                      <p key={`${test.id}.${text.Index}`}> {text.Index}</p>
                       ): text?.Attribute === "ul" ? (
-                        <ul>
+                        <ul key={`${test.id}.${text.Index}`}>
                           {text.Content.map((li:string, index: number) =>(
                             <li key={index}>{li}</li>
                           ))}

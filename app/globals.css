@@ -87,7 +87,3 @@ button:hover {
   @apply grow shrink basis-[0%] relative bg-cover bg-center bg-no-repeat transition-all duration-300 ease-in-out
 }
 
-@utility imageAcordianHover{
-  @apply grow-[3]
-}
-

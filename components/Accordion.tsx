@@ -6,7 +6,7 @@ function Accordion({images}: {images:Array<{Image:string, Text:string}>}) {
         <div>
             <div className='flex h-[400px]'>
                 {images.map((image)=>(
-                    <div key={image.Text} className='imageAcordian hover:imageAcordianHover'
+                    <div key={image.Text} className='imageAcordian hover:grow-[3]'
                     style={{backgroundImage: `url(${image.Image})`}}
                     >
                         <div className='items-center'>
