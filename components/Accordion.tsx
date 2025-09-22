@@ -4,9 +4,9 @@ function Accordion({images}: {images:Array<{Image:string, Text:string}>}) {
   return (
     <div>
         <div>
-            <div className='flex'>
+            <div className='flex h-[400px]'>
                 {images.map((image)=>(
-                    <div key={image.Text} className='grow shrink basis-[0%]'
+                    <div key={image.Text} className='grow shrink basis-[0%] relative bg-cover bg-center bg-no-repeat'
                     style={{backgroundImage: `url(${image.Image})`}}
                     >
                         <div className='items-center'>

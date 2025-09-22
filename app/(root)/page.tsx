@@ -49,16 +49,16 @@ export default async function Home() {
         </div>
       </section>
       {content?.map((test:{id:string, Title:string, images:Array<{Image:string, Text:string}>, Text:[], Link:string}) => (
-        <section key={test.id} className='container test mobiletest'>
-            <div>
-              <div className='text-center'>
+        <section key={test.id} className='container test mobiletest pb-[30px]'>
+            <div className='flex flex-col'>
+              <div className='text-center pb-[25px]'>
                 <h2>{test.Title}</h2>
               </div>
-              <div className='flex flex-col'>
-                <div className='container'>
+              <div className='container'>
+                <div className='test1 grow-[0] shrink-[0]'>
                   <Accordion images={test.images}/>
                 </div>
-                <div>
+                <div className='flex flex-col'>
                   {test.Text.map((text: {Attribute:string, Content:string[], index: number }) => (
                     text?.Attribute === "p" ? (
                       <p key={text.index}> {text.Content}</p>

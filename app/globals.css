@@ -57,12 +57,18 @@ button:hover {
 }
 
 @utility container {
-  @apply flex flex-row flex-wrap items-stretch gap-[10px] gap-y-[10px] gap-x-[10px] h-full flex-1 self-stretch mx-auto
+  @apply flex flex-row items-stretch gap-[10px] gap-y-[10px] gap-x-[10px] h-full flex-1 self-stretch mx-auto
 }
 
 @utility test {
   @media (min-width: 768px){
     max-width: min(100%, 1200px)
+}
+}
+
+@utility test1 {
+  @media (min-width: 768px){
+    width: 65%
 }
 }
 
