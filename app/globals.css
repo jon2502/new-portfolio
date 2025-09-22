@@ -7,6 +7,7 @@
   --BaseColor2: #2B353E;
   --DetailColor: #6FBAC3;
   --TextColor: #ECECEC;
+  --flex-wrap-mobile: wrap;
 }
 
 @theme inline {
@@ -54,3 +55,25 @@ button:hover {
 @utility flex-between {
   @apply flex flex-row bg-(--DetailColor)
 }
+
+@utility container {
+  @apply flex flex-row flex-wrap items-stretch gap-[10px] gap-y-[10px] gap-x-[10px] h-full flex-1 self-stretch mx-auto
+}
+
+@utility test {
+  @media (min-width: 768px){
+    max-width: min(100%, 1200px)
+}
+}
+
+@utility mobiletest {
+  @media (max-width: 767px){
+        width: 100%;
+        flex-wrap: var(--flex-wrap-mobile);
+    }
+}
+
+@utility containercenter{
+  @apply flex-row items-stretch grow shrink basis-auto gap-[10px] gap-y-[10px] h-full mx-auto max-w-[1200px] px-0 w-full
+}
+

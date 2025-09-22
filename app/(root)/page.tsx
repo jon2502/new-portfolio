@@ -2,13 +2,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { FetchAll } from '@/utils/supabase/connections/fetchAll';
+import Accordion from '@/components/Accordion';
 
 export default async function Home() {
       const content = await FetchAll('frontpage section content')
 
   return (
     <>
-    <div>
       <div>
         <h1>Jon Bjarke Sørensen - Portfolio</h1>
       </div>
@@ -48,37 +48,38 @@ export default async function Home() {
           </p>
         </div>
       </section>
-      {content?.map((test) => (
-        <section key={test.id} className='flex flex-col'>
-          <div>
-            <h2>{test.Title}</h2>
-          </div>
-          <div className='flex flex-row'>
+      {content?.map((test:{id:string, Title:string, images:Array<{Image:string, Text:string}>, Text:[], Link:string}) => (
+        <section key={test.id} className='container test mobiletest'>
             <div>
-              <p>Test</p>
+              <div className='text-center'>
+                <h2>{test.Title}</h2>
+              </div>
+              <div className='flex flex-col'>
+                <div className='container'>
+                  <Accordion images={test.images}/>
+                </div>
+                <div>
+                  {test.Text.map((text: {Attribute:string, Content:string[], index: number }) => (
+                    text?.Attribute === "p" ? (
+                      <p key={text.index}> {text.Content}</p>
+                      ): text?.Attribute === "ul" ? (
+                        <ul>
+                          {text.Content.map((li:string, index: number) =>(
+                            <li key={index}>{li}</li>
+                          ))}
+                        </ul>
+                      ):(null)
+                  ))}
+                  <button>
+                    <Link href={test.Link}>
+                        <span>Text</span>
+                    </Link>
+                  </button>
+                </div>
+              </div>
             </div>
-            <div>
-              {test.Text.map((text: any) => (
-                text?.Attribute === "p" ? (
-                  <p>{text.Content}</p>
-                  ): text?.Attribute === "ul" ? (
-                    <ul>
-                      {text.Content.map((li:string, index: number) =>(
-                        <li key={index}>{li}</li>
-                      ))}
-                    </ul>
-                  ):(null)
-              ))}
-              <button>
-                <Link href={test.Link}>
-                    <span>Text</span>
-                </Link>
-              </button>
-            </div>
-          </div>
         </section>
       ))}
-    </div>
     </>
   );
 }

@@ -24,10 +24,10 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
     <html lang="en">
       <body>
         <Navbar/>
-        <main className="max-w-8/10 mx-auto px-6">
+        <main className="min-h-[calc(100vh-320px)]">
           {children}
-          <Footer/>
         </main>
+        <Footer/>
       </body>
     </html>
   );
