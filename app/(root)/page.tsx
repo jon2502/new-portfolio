@@ -61,7 +61,7 @@ export default async function Home() {
                 <div className='flex flex-col'>
                   {test.Text.map((text: {Attribute:string, Index:number, Content:string[]}) => (
                     text?.Attribute === "p" ? (
-                      <p key={`${test.id}.${text.Index}`}> {text.Index}</p>
+                      <p key={`${test.id}.${text.Index}`}> {text.Content}</p>
                       ): text?.Attribute === "ul" ? (
                         <ul key={`${test.id}.${text.Index}`}>
                           {text.Content.map((li:string, index: number) =>(
