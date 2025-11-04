@@ -50,7 +50,7 @@ export default async function Home() {
       </section>
       {content?.map((test:{id:string, Title:string, images:Array<{Image:string, Text:string}>, Text:[], Link:string}) => (
         <section key={test.id} className='container test mobiletest pb-[30px]'>
-            <div className='flex flex-col'>
+            <div className='flex flex-col w-full'>
               <div className='text-center pb-[25px]'>
                 <h2>{test.Title}</h2>
               </div>
