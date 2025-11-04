@@ -42,7 +42,7 @@ h1 {
 button {
   background-color: var(--DetailColor);
   color: var(--BaseColor2);
-  width: 80px;
+  width: 120px;
   height: 40px;
   border-radius: 3px;
 }
@@ -57,7 +57,11 @@ button:hover {
 }
 
 @utility container {
-  @apply flex flex-row items-stretch gap-[10px] gap-y-[10px] gap-x-[10px] h-full flex-1 self-stretch mx-auto
+  @apply flex items-stretch gap-[10px] gap-y-[10px] gap-x-[10px] h-full flex-1 self-stretch mx-auto
+}
+
+@utility container-col {
+  @apply flex flex-col items-stretch gap-[10px] gap-y-[10px] gap-x-[10px] h-full flex-1 self-stretch mx-auto
 }
 
 @utility test {
