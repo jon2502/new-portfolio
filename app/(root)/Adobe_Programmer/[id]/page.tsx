@@ -11,7 +11,7 @@ const page = async ({params}: {params: Promise<{ id:string }>}) => {
 
   return (
     <>
-    <section>
+    <section className='container-col test mobiletest pb-[30px]'>
       <h1>{id}</h1>
       <button>
         <Link href={`/Adobe_Programmer`}>
