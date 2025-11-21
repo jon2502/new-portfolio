@@ -9,6 +9,8 @@ declare global {
         Info: Array<{
             Text: string;
             Image: string;
+            OriginalIMG: string;
+            NewIMG: string;
             Link: string;
         }>
     }
