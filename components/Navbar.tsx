@@ -10,19 +10,19 @@ const Navbar = () => {
                 <Image src="/Logo.png" alt="logo" width={380} height={75} />
             </Link>
             <div className='flex items-center gap-5'>
-            <Link href="/Webudvikling_Cases">
-                <span>Webudvikling Cases</span>
+            <Link href="/Webudvikling_cases">
+                <span>Webudvikling cases</span>
             </Link>
-            <Link href="/Multimediedesigner_Cases">
-                <span>Multimediedesigner Cases</span>
+            <Link href="/Multimediedesigner_cases">
+                <span>Multimediedesigner cases</span>
             </Link>
-            <Link href="/Adobe_Programmer">
-                <span>Adobe Programmer</span>
+            <Link href="/Adobe_programmer">
+                <span>Adobe programmer</span>
             </Link>
             <Link href="/Kodning">
                 <span>Kodning</span>
             </Link>
-            <Link href="/Om_Mig">
+            <Link href="/Om_mig">
                 <span>Om Mig</span>
             </Link>
             </div>
