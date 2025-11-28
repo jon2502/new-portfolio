@@ -17,23 +17,25 @@ const BeforeAfter = ({project}: {project:Project}) => {
       <div className='flex'>
          {Info.map((card) =>(
           <section key={card.OriginalIMG} className='mx-[10px] w-[100%] h-[100%]'>
-            <div className='w-[100%] h-[100%]'>
+            <div className='w-[100%] h-[100%] relative'>
               <Image
                 src={card.OriginalIMG}
                 alt="Original Image"
-                width={500}
-                height={500}
-                className="absolute object-cover"
+                width={0}
+                height={0}
+                sizes="100vw"
+                className="absolute object-cover w-[100%] h-[100%]"
               />
               <Image
                 src={card.NewIMG}
                 alt="New Image"
-                width={500}
-                height={500}
-                className="object-cover"
+                width={0}
+                height={0}
+                sizes="100vw"
+                className="object-cover w-[100%] h-[100%]"
               />
             </div>
-            <div className='absolute w-[100%] h-[100%] top-0 z-40'>
+            <div className='relative w-[100%] h-[100%] z-40'>
               <div className='absolute w-[38px] h-[38px] top-[50%] border-solid border-[3px] border-[#fff] rounded-full'>
                 <span></span>
                 <span></span>
