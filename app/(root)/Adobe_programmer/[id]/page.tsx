@@ -5,7 +5,7 @@ import React from 'react'
 
 
 const page = async ({params}: {params: Promise<{ id:string }>}) => {
-  
+  console.log("ran")
   const id = (await params).id
   const data = await FetchSelcet('Adobe projects','Program', id)
 
@@ -14,7 +14,7 @@ const page = async ({params}: {params: Promise<{ id:string }>}) => {
     <section className='container-col test mobiletest pb-[30px]'>
       <h1>{id}</h1>
       <button>
-        <Link href={`/Adobe_Programmer`}>
+        <Link href={`/Adobe_programmer`}>
           <span>Tilbage</span>
         </Link>
       </button>
