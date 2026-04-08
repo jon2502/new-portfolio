@@ -8,7 +8,6 @@ const page = async ({params}: {params: Promise<{ id:string }>}) => {
   console.log("ran")
   const id = (await params).id
   const data = await FetchSelcet('Adobe projects','Program', id)
-
   return (
     <>
     <section className='container-col test mobiletest pb-[30px]'>
@@ -18,7 +17,10 @@ const page = async ({params}: {params: Promise<{ id:string }>}) => {
           <span>Tilbage</span>
         </Link>
       </button>
-      {data?.map((project: Project) => (<ComponentSelctor key={project?.id} project={project}/>))}
+      <div>
+        
+      </div>
+      {data?.map((Project: Project) => (<ComponentSelctor key={Project?.id} Project={Project}/>))}
     </section>
     </>
   )

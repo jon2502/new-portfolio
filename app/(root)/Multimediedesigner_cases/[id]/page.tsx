@@ -6,18 +6,22 @@ import React from 'react'
 
 const page =  async ({params}: {params: Promise<{ id:string }>}) => {
   const id = (await params).id
-  const data = await FetchSelcet('Adobe projects','Program', id)
-
+  console.log(`${id}`)
+  const data = await FetchSelcet('Multimediedesigner cases','Connection', id)
   return (
     <>
     <section>
-      <h1>{id}</h1>
+      <h1>{data[0].titel}</h1>
+      <h2>{data[0].subtitel}</h2>
       <button>
         <Link href={`/Multimediedesigner_Case`}>
           <span>Tilbage</span>
         </Link>
       </button>
-      {data?.map((project: Project) => (<ComponentSelctor key={project?.id} project={project}/>))}
+      <div>
+        
+      </div>
+      {data?.map((Project: Project) => (<ComponentSelctor key={Project?.id} Project={Project}/>))}
     </section>
     </>
   )

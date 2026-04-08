@@ -3,8 +3,8 @@
 import Image from 'next/image';
 import React, { useState } from 'react'
 
-const BeforeAfter = ({project}: {project:Project}) => {
-  const {Title, Text, Info} = project
+const BeforeAfter = ({Project}: {Project:Project}) => {
+  const {Title, Text, Info} = Project
 
   const [sliderPosition, setSliderPosition] = useState(50);
 

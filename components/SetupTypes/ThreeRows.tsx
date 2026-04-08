@@ -4,8 +4,8 @@ import Link from 'next/link';
 import React from 'react'
 
 
-const ThreeRows = ({project}: {project:Project}) => {
-  const {Title, Text, Info, BigImage} = project
+const ThreeRows = ({Project}: {Project:Project}) => {
+  const {Title, Text, Info, BigImage} = Project
 
   
   return (

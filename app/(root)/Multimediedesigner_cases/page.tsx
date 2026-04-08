@@ -1,4 +1,5 @@
 import { FetchSelcet } from '@/utils/supabase/connections/FetchSelect';
+import Link from 'next/link';
 import React from 'react'
 
 const page = async() => {
@@ -16,9 +17,10 @@ const page = async() => {
           <div>
             <h1>Cases</h1>
             {semester?.cases?.map((item:any)=>(
-              <p key={item}>
-                {item}
-              </p>
+              <Link key={item}
+                href={`/Multimediedesigner_cases/${item}`}>
+                      <span>{item}</span>
+              </Link>
             ))}
           </div>
 

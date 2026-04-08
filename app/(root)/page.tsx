@@ -5,7 +5,7 @@ import { FetchAll } from '@/utils/supabase/connections/fetchAll';
 import Accordion from '@/components/Accordion';
 
 export default async function Home() {
-      const content = await FetchAll('frontpage section content')
+      const content = await FetchAll('Frontpage section content')
 
   return (
     <>
@@ -18,37 +18,37 @@ export default async function Home() {
       </div>
       <section className='flex-between'>
         <div>
-          <Image src="" alt="logo" width={10} height={10}/>
+          <p>icon</p>
           <p>
             Erfaring inden for billede redigering.
           </p>
         </div>
         <div>
-          <Image src="" alt="logo" width={10} height={10}/>
+          <p>icon</p>
           <p>
             Erfaring inden for video redigering.
           </p>
         </div>
         <div>
-          <Image src="" alt="logo" width={10} height={10}/>
+          <p>icon</p>
           <p>
             Erfaring inde for vektor tegnening.
           </p>
         </div>
         <div>
-          <Image src="" alt="logo" width={10} height={10}/>
+          <p>icon</p>
           <p>
             Erfaring inden for kodning JavaScript, Vue.js, React.js og Next.js.
           </p>
         </div>
         <div>
-          <Image src="" alt="logo" width={10} height={10}/>
+          <p>icon</p>
           <p>
             Erfaring inden for datahåndtering og databaser.
           </p>
         </div>
       </section>
-      {content?.map((test:{id:string, Title:string, images:Array<{Image:string, Text:string}>, Text:[], Link:string}) => (
+      {content?.map((test:{id:string, Title:string, Images:Array<{Image:string, Text:string}>, Text:[], Link:string}) => (
         <section key={test.id} className='container test mobiletest pb-[30px]'>
             <div className='flex flex-col w-full'>
               <div className='text-center pb-[25px]'>
@@ -56,7 +56,7 @@ export default async function Home() {
               </div>
               <div className='container'>
                 <div className='test1 grow-[0] shrink-[0]'>
-                  <Accordion images={test.images}/>
+                  <Accordion Images={test.Images}/>
                 </div>
                 <div className='flex flex-col'>
                   {test.Text.map((text: {Attribute:string, Index:number, Content:string[]}) => (
