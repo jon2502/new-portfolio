@@ -1,6 +1,6 @@
 import React from 'react'
 
-const VideoWithTimeLine = ({project}: {project:Project}) => {
+const VideoWithTimeLine = ({Project}: {Project:Project}) => {
   return (
     <div>VideoWithTimeLine</div>
   )
