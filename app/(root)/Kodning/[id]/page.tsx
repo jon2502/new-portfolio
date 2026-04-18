@@ -9,7 +9,7 @@ const page = async ({params}: {params: Promise<{ id:string }>}) => {
   return (
     <>
       <section>
-        {data?.map((project) => (<ComponentSelctor key={project?.id} project={project}/>))}
+        {data?.map((Project) => (<ComponentSelctor key={Project?.id} Project={Project}/>))}
       </section>
     </>
   )

@@ -5,7 +5,6 @@ import React from 'react'
 
 
 const page = async ({params}: {params: Promise<{ id:string }>}) => {
-  console.log("ran")
   const id = (await params).id
   const data = await FetchSelcet('Adobe projects','Program', id)
   return (
