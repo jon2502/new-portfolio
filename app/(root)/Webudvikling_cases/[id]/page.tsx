@@ -6,7 +6,7 @@ const page = async ({params}: {params: Promise<{ id:string }>}) => {
   const id = (await params).id
   const data = await FetchSelcet('Adobe projects','Program', id)
   return (
-    <div>page</div>
+    <div>Web udviklings case</div>
   )
 }
 

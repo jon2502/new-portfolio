@@ -4,6 +4,7 @@ import React from 'react'
 function TwoRows({Project}: {Project:Project}) {
     console.log(Project.ImageGallery)
     const imagegallery = Project.ImageGallery
+    const Info = Project.Info
   return (
     <section className='flex max-w-[1140px] mx-auto'>
         <section className='flex flex-row items-center w-[33%] p-[10px]'>
@@ -24,7 +25,9 @@ function TwoRows({Project}: {Project:Project}) {
                 )}
             </div>
             <div>
-                <p>text</p>
+                {Info.map((text:any)=>(
+                    <p>{text}</p>
+                ))}
             </div>
         </section>
     </section>
