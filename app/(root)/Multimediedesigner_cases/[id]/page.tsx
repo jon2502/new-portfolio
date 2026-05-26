@@ -19,7 +19,7 @@ const page =  async ({params}: {params: Promise<{ id:string }>}) => {
         </Link>
       </button>
       <section>
-        <Image src={data.Intro[0]} alt="logo" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }}/>
+        <Image src={data.Intro[0]} alt="logo" width={0} height={0} sizes="100vw" style={{ width: '90%', height: 'auto' }}/>
         <div>
           {data.Intro[1].map((text:any)=> (
             <div>
