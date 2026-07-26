@@ -55,7 +55,7 @@ export default async function Home() {
                 <h2>{test.Title}</h2>
               </div>
               <div className='container'>
-                <div className='test1 grow-[0] shrink-[0]'>
+                <div className='test1 grow-0 shrink-0'>
                   <Accordion Images={test.Images}/>
                 </div>
                 <div className='flex flex-col'>

@@ -14,8 +14,8 @@ const ThreeRows = ({Project}: {Project:Project}) => {
       <p className='text-center'>{Text}</p>
       <div className='flex max-w-[1140px] mx-auto'>
         {Info.map((card) =>(
-          <div key={card.Text} className='flex flex-col items-center w-[33%] p-[10px]'>
-            <p className='text-center mb-[20px]'>{card.Text}</p>
+          <div key={card.Text} className='flex flex-col items-center w-[33%] p-2.5'>
+            <p className='text-center mb-5'>{card.Text}</p>
             {card.Image ? (
               <Image src={card.Image} alt="logo" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }}/>
             ):(

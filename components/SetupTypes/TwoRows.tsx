@@ -7,7 +7,7 @@ function TwoRows({Project}: {Project:Project}) {
     const Info = Project.Info
   return (
     <section className='flex max-w-[1140px] mx-auto'>
-        <section className='flex flex-row items-center w-[33%] p-[10px]'>
+        <section className='flex flex-row items-center w-[33%] p-2.5'>
             <div>
                 <h1>gallery</h1>
                 {Project.ImageGallery.length == 2 ? (

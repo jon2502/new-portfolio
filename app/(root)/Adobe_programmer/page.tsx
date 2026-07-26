@@ -16,7 +16,7 @@ const page = async () => {
         {data.map((program)=>(
           <section key={program.id} className='flex justify-center'>
             <div className='flex w-full'>
-              <div className='p-[10px] w-[30%]'>
+              <div className='p-2.5 w-[30%]'>
                 <Image src={program.Image} alt={program.Title+" Logo"} width={300} height={300}/>
               </div>
               <div className='w-[60%] h-full flex flex-col justify-center'>
