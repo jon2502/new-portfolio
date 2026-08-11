@@ -16,21 +16,25 @@ const page =  async ({params}: {params: Promise<{ id:string }>}) => {
       <h2>{data.Subtitel}</h2>
       <hr></hr>
       <button>
-        <Link href={`/Multimediedesigner_Case`}>
+        <Link href={`/Multimediedesigner_cases`}>
           <span>Tilbage</span>
         </Link>
       </button>
       <section>
         <Image src={data.Intro[0]} alt="logo" width={0} height={0} sizes="100vw" style={{ width: '90%', height: 'auto' }}/>
-        <div className='flex max-w-5xl mx-auto'>
+        <div className='flex max-w-5xl mx-auto pt-13'>
           {data.Intro[1].map((text:any)=> (
-            <div key={text.titel} className='flex flex-col items-center w-[25%]'>
-              <p>{text.title}</p>
-              <p className='c'>{text.info}</p>
+            <div key={text.titel} className='flex flex-col items-center w-[25%] p-2.5'>
+              <h3 className='text-center'>{text.title}</h3>
+              <p className='text-center'>{text.info}</p>
             </div>
           ))}
         </div>
-        <p>{data.Intro[2]}</p>
+        <div>
+          <hr></hr>
+          <p className='my-[35px] text-center'>{data.Intro[2]}</p>
+          <hr></hr>
+        </div>
       </section>
       <ComponentSelctor key={data?.id} Project={data}/>
       <div>

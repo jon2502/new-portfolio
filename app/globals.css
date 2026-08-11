@@ -40,12 +40,26 @@ h1 {
   color: var(--DetailColor);
 }
 
+h5 {
+  font-size: 1.5rem;
+  color: var(--DetailColor);
+}
+
 button {
   background-color: var(--DetailColor);
   color: var(--BaseColor2);
   width: 120px;
   height: 40px;
   border-radius: 3px;
+}
+
+ul {
+  color: var(--DetailColor);
+}
+
+li:hover{
+  transition: 0.1s;
+  color: var(--TextColor);
 }
 
 button:hover {

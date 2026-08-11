@@ -9,22 +9,25 @@ const page = async() => {
       <h1>Multimediedesigner cases</h1>
       <p className='mb-[2.5%]'>Cases vist herunder blev alle lavet under min multimedie designer uddannelse på IBA</p>
       {data.Cases.map((semester:any)=>(
-        <div key={semester.Title} className='flex'>
-          <div className='p-[10px] w-[50%] flex flex-wrap content-start'>
+        <section key={semester.Title} className='flex flex-row max-sm:flex-col'>
+          <div className='flex flex-wrap content-start flex-col p-2.5 w-[50%] max-sm:w-[95%]'>
             <h1>{semester.Title}</h1>
-            <p>{semester.Text}</p>
+            <p className='w-[95%]'>{semester.Text}</p>
           </div>
-          <div>
-            <h1>Cases</h1>
-            {semester?.cases?.map((item:any)=>(
-              <Link key={item}
-                href={`/Multimediedesigner_cases/${item}`}>
-                      <span>{item}</span>
-              </Link>
-            ))}
+          <div className='p-2.5 w-[50%] flex flex-wrap content-start flex-col'>
+            <h5>Cases</h5>
+            <ul>
+              {semester?.cases?.map((item:any)=>(
+                <li key={item} className='ml-10'>
+                  <Link 
+                    href={`/Multimediedesigner_cases/${item}`}>
+                    <span>{item}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
-
-        </div>
+        </section>
       ))}
     </section>
   )
