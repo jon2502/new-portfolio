@@ -1,5 +1,3 @@
-
-import React from 'react'
 import { FetchAll } from '@/utils/supabase/connections/fetchAll'
 import Link from 'next/link'
 import Image from 'next/image'

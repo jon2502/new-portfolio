@@ -1,6 +1,5 @@
 
 import { FetchOne } from '@/utils/supabase/connections/FetchOne';
-import React from 'react'
 
 const page = async() => {
   const data = await FetchOne('Uddannelser','Uddannelse', 'Webudviklings cases')

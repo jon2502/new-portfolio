@@ -53,17 +53,17 @@ button {
   border-radius: 3px;
 }
 
+button:hover {
+  transition: 0.4s;
+  color: var(--TextColor);
+}
+
 ul {
   color: var(--DetailColor);
 }
 
 li:hover{
   transition: 0.1s;
-  color: var(--TextColor);
-}
-
-button:hover {
-  transition: 0.4s;
   color: var(--TextColor);
 }
 
@@ -79,18 +79,6 @@ button:hover {
   @apply flex flex-col items-stretch gap-2.5 gap-y-2.5 gap-x-2.5 h-full flex-1 self-stretch mx-auto
 }
 
-@utility test {
-  @media (min-width: 768px){
-    max-width: min(100%, 1200px)
-}
-}
-
-@utility test1 {
-  @media (min-width: 768px){
-    width: 65%
-}
-}
-
 @utility containercenter{
   @apply flex-row items-stretch grow shrink basis-auto gap-2.5 gap-y-2.5 h-full mx-auto max-w-[1200px] px-0 w-full
 }
@@ -104,5 +92,17 @@ button:hover {
         width: 100%;
         flex-wrap: var(--flex-wrap-mobile);
     }
+}
+
+@utility test {
+  @media (min-width: 768px){
+    max-width: min(100%, 1200px)
+}
+}
+
+@utility test1 {
+  @media (min-width: 768px){
+    width: 65%
+}
 }
 

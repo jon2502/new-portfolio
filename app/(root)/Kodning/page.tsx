@@ -1,7 +1,6 @@
 
 import { FetchAll } from '@/utils/supabase/connections/fetchAll'
 import Image from 'next/image'
-import React from 'react'
 
 const page = async () => {
   const data = await FetchAll('Programmeringssprog')

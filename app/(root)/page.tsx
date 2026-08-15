@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { FetchAll } from '@/utils/supabase/connections/fetchAll';
 import Accordion from '@/components/Accordion';
 
+
 export default async function Home() {
       const content = await FetchAll('Frontpage section content')
 
