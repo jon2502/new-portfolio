@@ -6,16 +6,8 @@ declare global {
         Title:string;
         Text:string;
         BigImage: string;
-        Info: InfoContent[]
+        Info: string[]
         ImageGallery: string[][]
-    }
-
-    type InfoContent = {
-        Text: string;
-        Image: string;
-        OriginalIMG: string;
-        NewIMG: string;
-        Link: string;
     }
 }
 

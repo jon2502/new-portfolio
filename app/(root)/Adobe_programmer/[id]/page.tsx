@@ -7,7 +7,7 @@ const page = async ({params}: {params: Promise<{ id:string }>}) => {
   const data = await FetchSelcet('Adobe projects','Program', id)
   return (
     <>
-    <section className='container-col test mobiletest pb-[30px]'>
+    <section className='container-col test mobiletest pb-7.5'>
       <h1>{id}</h1>
       <button>
         <Link href={`/Adobe_programmer`}>

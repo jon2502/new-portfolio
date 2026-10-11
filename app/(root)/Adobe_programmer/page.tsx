@@ -5,9 +5,8 @@ import Image from 'next/image'
 const page = async () => {
 
   const data = await FetchAll('Adobe programs')
-  console.log(data)
   return (
-    <section className='container-col test mobiletest pb-[30px]'>
+    <section className='container-col test mobiletest pb-7.5'>
       <p>Når det kommer til adobe så har jeg en God erfaring med en del af programmerne.  Ud af alle adobe programmerne så er dem jeg er mest erfarende med Photoshop; ilustrator, After effect og premiere pro.</p>
       <p>Nedenunder kan du læse mere samt finde eksempler på hvad jeg har lavet med de forskellige programmer.</p>
       <div>
@@ -29,7 +28,7 @@ const page = async () => {
                   </ul>
                 </div>
                 <div className='text-right'>
-                  <button className='w-[120px] h-auto'>
+                  <button className='w-30 h-auto'>
                     <Link href={`/Adobe_programmer/${program.Title}`}>
                       <span>Se eksempler</span>
                     </Link>
