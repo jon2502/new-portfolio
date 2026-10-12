@@ -10,14 +10,16 @@ export default async function Home() {
 
   return (
     <>
-      <div>
-        <h1>Jon Bjarke Sørensen - Portfolio</h1>
-      </div>
-      <hr />
-      <div>
-        <p>Mit navn er Jon Bjarke Sørensen, jeg er uddannet webudvikler og multimedie designer</p>
-      </div>
-      <section className='flex-between'>
+      <section className='flex flex-col gap-y-2.5 gap-x-[2.5%] h-full flex-1 self-stretch mx-auto mb-5 max-md:w-[95%]'>
+        <div >
+          <h1>Jon Bjarke Sørensen - Portfolio</h1>
+        </div>
+        <hr />
+        <div>
+          <p>Mit navn er Jon Bjarke Sørensen, jeg er uddannet webudvikler og multimedie designer</p>
+        </div>
+      </section>
+      <section className='flex-between max-md:flex-col'>
         <div>
           <p>icon</p>
           <p>
@@ -50,12 +52,12 @@ export default async function Home() {
         </div>
       </section>
       {content?.map((test:{id:string, Title:string, Images:Array<{Image:string, Text:string}>, Text:[], Link:string}) => (
-        <section key={test.id} className='container test mobiletest pb-[30px]'>
+        <section key={test.id} className='container test mobiletest pb-7.5'>
             <div className='flex flex-col w-full'>
-              <div className='text-center pb-[25px]'>
+              <div className='text-center pb-6.25'>
                 <h2>{test.Title}</h2>
               </div>
-              <div className='container'>
+              <div className='container max-md:flex-col'>
                 <div className='test1 grow-0 shrink-0'>
                   <Accordion Images={test.Images}/>
                 </div>
@@ -71,11 +73,13 @@ export default async function Home() {
                         </ul>
                       ):(null)
                   ))}
-                  <button>
-                    <Link href={test.Link}>
-                        <span>Text</span>
-                    </Link>
-                  </button>
+                  <div className='text-right'>
+                    <button>
+                      <Link href={test.Link}>
+                          <span>Text</span>
+                      </Link>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>

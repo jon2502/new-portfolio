@@ -10,20 +10,20 @@ const ThreeRows = ({Project}: {Project:Project}) => {
   
   return (
     <section>
-      <h1>{Title}</h1>
-      <p className='text-center'>{Text}</p>
-      <div className='flex max-w-[1140px] mx-auto'>
-        {Info.map((card) =>(
-          <div key={card.Text} className='flex flex-col items-center w-[33%] p-2.5'>
-            <p className='text-center mb-5'>{card.Text}</p>
-            {card.Image ? (
-              <Image src={card.Image} alt="logo" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }}/>
+      <h1 className='mb-2.5'>{Title}</h1>
+      <p className='mb-5'>{Text}</p>
+      <div className='flex max-w-285 mx-auto'>
+        {Info.map((item) =>(
+          <div key={item.Text} className='flex flex-col items-center w-[33%] p-2.5'>
+            <p className='text-center mb-5 h-max'>{item.Text}</p>
+            {item.Image ? (
+              <Image src={item.Image} alt="logo" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }}/>
             ):(
               null
             )}
-            {card.Link ? (
+            {item.Link ? (
               <button>
-                <Link href={card.Link}>
+                <Link href={item.Link}>
                     <span>Text</span>
                 </Link>
               </button>

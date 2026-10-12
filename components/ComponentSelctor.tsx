@@ -5,7 +5,7 @@ import TwoRows from './SetupTypes/TwoRows'
 import ThreeRows from './SetupTypes/ThreeRows'
 import VideoWithTimeLine from './SetupTypes/VideoWithTimeLine'
 
-const ComponentSelctor = ({ Project }:{Project:any}) => {
+const ComponentSelctor = ({ Project }:{Project:Project}) => {
     switch(Project.SetupType) {
         case "BeforeAfter":
             return <BeforeAfter key={Project?.id} Project={Project}/>

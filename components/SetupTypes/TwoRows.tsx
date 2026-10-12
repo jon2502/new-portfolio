@@ -3,7 +3,7 @@ import React from 'react'
 
 function TwoRows({Project}: {Project:Project}) {
     const imagegallery = Project.ImageGallery
-    const Info = Project.Info
+    const Info = Project.TextArray
 
   return (
     <section className='flex max-w-285 mx-auto'>
