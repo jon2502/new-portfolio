@@ -79,7 +79,7 @@ button:hover {
 }
 
 @utility ulLink{
-  @apply text-(--DetailColor)
+  color: var(--DetailColor)
 }
 
 @utility liHover{
