@@ -17,10 +17,10 @@ const page = async() => {
             <h5>Cases</h5>
             <ul className='ulLink'>
               {semester?.cases?.map((item:any)=>(
-                <li key={item} className='ml-10 hover:liHover'>
-                  <Link 
+                <li key={item} className='ml-10'>
+                  <Link className='hover:liHover'
                     href={`/Multimediedesigner_cases/${item}`}>
-                    <span>{item}</span>
+                    <span >{item}</span>
                   </Link>
                 </li>
               ))}

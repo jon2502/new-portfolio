@@ -82,7 +82,6 @@ button:hover {
   @apply text-(--DetailColor)
 }
 
-
 @utility liHover{
   @apply text-(--TextColor) transition-all duration-100
 }
