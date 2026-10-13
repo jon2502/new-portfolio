@@ -4,7 +4,7 @@ import Link from 'next/link';
 const page = async() => {
   const data = await FetchOne('Uddannelser','Uddannelse', 'Multimediedesigner')
   return (
-    <section className='container-col test mobiletest pb-[30px]'>
+    <section className='container-col test mobiletest pb-7.5'>
       <h1>Multimediedesigner cases</h1>
       <p className='mb-[2.5%]'>Cases vist herunder blev alle lavet under min multimedie designer uddannelse på IBA</p>
       {data.Cases.map((semester:any)=>(
@@ -15,9 +15,9 @@ const page = async() => {
           </div>
           <div className='p-2.5 w-[50%] flex flex-wrap content-start flex-col'>
             <h5>Cases</h5>
-            <ul className='ul-link'>
+            <ul className='ulLink'>
               {semester?.cases?.map((item:any)=>(
-                <li key={item} className='ml-10 li-hover'>
+                <li key={item} className='ml-10 hover:liHover'>
                   <Link 
                     href={`/Multimediedesigner_cases/${item}`}>
                     <span>{item}</span>

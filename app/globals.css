@@ -58,15 +58,6 @@ button:hover {
   color: var(--TextColor);
 }
 
-ul {
-  color: var(--DetailColor);
-}
-
-li:hover{
-  transition: 0.1s;
-  color: var(--TextColor);
-}
-
 @utility flex-between {
   @apply flex flex-row bg-(--DetailColor)
 }
@@ -85,6 +76,15 @@ li:hover{
 
 @utility imageAccordian{
   @apply grow shrink basis-[0%] min-w-37.5 relative bg-linear-to-b from-black/30 to-black/30 bg-cover bg-center bg-no-repeat transition-all duration-300 ease-in-out
+}
+
+@utility ulLink{
+  @apply text-(--DetailColor)
+}
+
+
+@utility liHover{
+  @apply text-(--TextColor) transition-all duration-100
 }
 
 @utility mobiletest {
