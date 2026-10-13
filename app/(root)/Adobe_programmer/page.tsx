@@ -13,7 +13,7 @@ const page = async () => {
       <div>
         {data.map((program, index:number)=>(
           <section key={program.id} className='flex justify-center'>
-            <div className='flex w-full'>
+            <div className='flex w-full max-md:flex-col'>
               {index % 2 == 0 ? (
                 <>
                   <div className='p-2.5 w-[30%]'>
