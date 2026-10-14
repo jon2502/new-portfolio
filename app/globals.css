@@ -75,7 +75,7 @@ button:hover {
 }
 
 @utility imageAccordian{
-  @apply grow shrink basis-[0%] min-w-37.5 relative bg-linear-to-b from-black/30 to-black/30 bg-cover bg-center bg-no-repeat transition-all duration-300 ease-in-out
+  @apply relative grow shrink basis-[0%] bg-linear-to-b from-black/30 to-black/30 bg-cover bg-center bg-no-repeat transition-all duration-300 ease-in-out
 }
 
 @utility ulLink{
