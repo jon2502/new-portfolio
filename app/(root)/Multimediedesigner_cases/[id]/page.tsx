@@ -19,11 +19,11 @@ const page =  async ({params}: {params: Promise<{ id:string }>}) => {
           <span>Tilbage</span>
         </Link>
       </button>
-      <section>
+      <section className='flex flex-col items-center'>
         <Image src={data.Intro[0]} alt="logo" width={0} height={0} sizes="100vw" style={{ width: '90%', height: 'auto' }}/>
-        <div className='flex max-w-5xl mx-auto pt-13'>
+        <div className='flex max-w-5xl mx-auto my-7 items-center max-md:flex-col'>
           {data.Intro[1].map((text:any)=> (
-            <div key={text.title} className='flex flex-col items-center w-[25%] p-2.5'>
+            <div key={text.title} className='flex flex-col items-center w-[25%] p-2.5 max-md:w-full'>
               <h3 className='text-center'>{text.title}</h3>
               <p className='text-center'>{text.info}</p>
             </div>
@@ -31,7 +31,7 @@ const page =  async ({params}: {params: Promise<{ id:string }>}) => {
         </div>
         <div>
           <hr></hr>
-          <p className='my-8.75 text-center'>{data.Intro[2]}</p>
+          <p className='my-7 text-center'>{data.Intro[2]}</p>
           <hr></hr>
         </div>
       </section>
