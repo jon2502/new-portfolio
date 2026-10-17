@@ -95,7 +95,7 @@ button:hover {
 
 @utility test {
   @media (min-width: 768px){
-    max-width: min(100%, 1200px)
+    max-width: min(90%, 1200px)
 }
 }
 
