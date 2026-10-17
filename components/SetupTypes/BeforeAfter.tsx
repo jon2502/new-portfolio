@@ -14,9 +14,9 @@ const BeforeAfter = ({Project}: {Project:Project}) => {
         <p>{Text}</p>
         <p>(hvis der ikke er noget prøv at genindlæs siden)</p>
       </div>
-      <div className='flex'>
+      <div className='flex gap-5'>
          {Info.map((card) =>(
-          <section key={card.OriginalIMG} className='relative  w-full h-full'>
+          <section key={card.OriginalIMG} className='relative  w-full h-full overflow-hidden'>
             <div className='w-full h-full relative'>
               <Image
                 src={card.OriginalIMG}
@@ -35,9 +35,9 @@ const BeforeAfter = ({Project}: {Project:Project}) => {
                 className="object-cover w-full h-full"
               />
             </div>
-            <div className='absolute w-9.5 h-9.5 mt-5.5 ml-4.75 top-[50%] border-solid border-[3px] border-white rounded-full after:content-[" "] after:top-[50%] after:mt-5.5 after:w-0.75 after:h-[9999px] after:left-[50%] after:ml-[-1.5px] after:block after:bg-white after:absolute after:z-30'>
-              <span></span>
-              <span></span>
+            <div className='absolute left-[50%] w-9.5 h-9.5 top-[50%] -mt-5.5 -ml-5.5 border-solid border-[3px] border-white rounded-full z-40
+            before:bottom-[50%] before:mb-5.5 before:ml-[-1.5px]
+            '>
             </div>
           </section>
          ))}
