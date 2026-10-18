@@ -16,7 +16,6 @@ const BeforeAfterImage = ({card}: {card:{OriginalIMG:string, NewIMG:string}}) =>
     const rect = containerRef.current.getBoundingClientRect();
     // Calculate where the mouse is relative to the container.
     const x = Math.max(0, Math.min(event.clientX - rect.left, rect.width));
-    console.log("x is: " + x)
     // calculate percentage
     const percent = (x / rect.width) * 100;
     setSliderPosition(percent);
@@ -25,7 +24,11 @@ const BeforeAfterImage = ({card}: {card:{OriginalIMG:string, NewIMG:string}}) =>
   return (
     <>
     <section className='relative  w-full h-full overflow-hidden'>
-            <div ref={containerRef} className='w-full h-full relative'>
+            <div ref={containerRef} className='group w-full h-full relative'>
+                <div className='opacity-0 z-10 w-full h-full absolute bg-black ease-in-out duration-400 transition-opacity group-hover:opacity-50'>
+                    <p>Before</p>
+                    <p>After</p>
+                </div>
               <Image
                 src={card.OriginalIMG}
                 alt="Original Image"
@@ -51,7 +54,6 @@ const BeforeAfterImage = ({card}: {card:{OriginalIMG:string, NewIMG:string}}) =>
             `}
             style={{left: `${sliderPosition}%`}}
             onPointerDown={(event) => {
-                //
                 setIsDragging(true);
                 event.currentTarget.setPointerCapture(event.pointerId);
             }}
