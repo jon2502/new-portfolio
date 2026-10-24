@@ -37,6 +37,14 @@ body {
 h1 {
   font-family: var(--font-changa);
   font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--DetailColor);
+}
+
+h2 {
+  font-family: var(--font-changa);
+  font-size: 2rem;
+  font-weight: 400;
   color: var(--DetailColor);
 }
 
@@ -45,7 +53,17 @@ h5 {
   color: var(--DetailColor);
 }
 
+p {
+  font-family: var(--font-roboto);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--TextColor);
+}
+
 button {
+  font-family: var(--font-roboto);
+  font-size: 17px;
+  font-weight: 500;
   background-color: var(--DetailColor);
   color: var(--BaseColor2);
   width: 120px;

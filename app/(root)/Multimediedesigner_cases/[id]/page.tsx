@@ -37,8 +37,8 @@ const page =  async ({params}: {params: Promise<{ id:string }>}) => {
       </section>
       <ComponentSelctor key={data?.id} Project={data}/>
       <div>
-        {data.Synopsis.map((text:string)=>(
-          <p key={text}>{text}</p>
+        {data.Synopsis.map((text:string,index:number)=>(
+          <p key={text} className={`${index != data.Synopsis.length-1 && 'mb-3.5'}`}>{text}</p>
         ))}
       </div>
     </section>

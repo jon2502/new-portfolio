@@ -26,7 +26,7 @@ function TwoRows({Project}: {Project:Project}) {
             </div>
             <div className='flex justify-start items-start flex-col w-[35%] h-[85%] max-md:w-[90%]'>
                 {Info.map((Text:string)=>(
-                    <p key={Text} className='mb-3.75 text-[18px] leading-normal'>{Text}</p>
+                    <p key={Text} className='mb-3.75 leading-normal'>{Text}</p>
                 ))}
             </div>
         </section>
