@@ -48,8 +48,24 @@ h2 {
   color: var(--DetailColor);
 }
 
-h5 {
+h3 {
+    font-family: var(--font-changa);
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: var(--DetailColor);
+}
+
+h4{
+  font-family: var(--font-changa);
   font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--DetailColor);
+}
+
+h5 {
+  font-family: var(--font-changa);
+  font-size: 1.25rem;
+  font-weight: 400;
   color: var(--DetailColor);
 }
 

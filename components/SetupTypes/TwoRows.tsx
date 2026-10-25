@@ -9,7 +9,6 @@ function TwoRows({Project}: {Project:Project}) {
     <section className='flex max-w-285 mx-auto'>
         <section className='flex flex-row items-center p-2.5 max-md:flex-col-reverse'>
             <div className='w-[65%] max-md:w-[90%]'>
-                <h1 className='text-center mb-5'>Galleri</h1>
                 {Project.ImageGallery.length == 2 ? (
                     <section className='flex flex-col'>
                         {imagegallery.map((gallery, index) => (
