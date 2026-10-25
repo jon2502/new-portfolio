@@ -1,8 +1,6 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react'
-
 
 const ThreeRows = ({Project}: {Project:Project}) => {
   const {Title, Text, Info, BigImage} = Project
@@ -10,11 +8,11 @@ const ThreeRows = ({Project}: {Project:Project}) => {
   
   return (
     <section>
-      <h1 className='mb-2.5'>{Title}</h1>
+      <h2 className='mb-2.5'>{Title}</h2>
       <p className='mb-5'>{Text}</p>
-      <div className='flex max-w-285 mx-auto'>
+      <div className='container test mobiletest max-md:flex-col'>
         {Info.map((item) =>(
-          <div key={item.Text} className='flex flex-col items-center w-[33%] p-2.5'>
+          <div key={item.Text} className='flex flex-col items-center w-full p-2.5'>
             <p className='text-center mb-5 h-max'>{item.Text}</p>
             {item.Image ? (
               <Image src={item.Image} alt="logo" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }}/>

@@ -12,7 +12,7 @@ const BeforeAfter = ({Project}: {Project:Project}) => {
         <p>{Text}</p>
         <p>(hvis der ikke er noget prøv at genindlæs siden)</p>
       </div>
-      <div className='flex gap-5'>
+      <div className='flex gap-5 flex-row max-md:flex-col'>
          {Info.map((card) =>(
           <BeforeAfterImage key={card.OriginalIMG} card={card}/>
          ))}
