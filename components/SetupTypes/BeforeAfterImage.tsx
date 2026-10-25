@@ -25,9 +25,13 @@ const BeforeAfterImage = ({card}: {card:{OriginalIMG:string, NewIMG:string}}) =>
     <>
     <section className='relative  w-full h-full overflow-hidden'>
             <div ref={containerRef} className='group w-full h-full relative'>
-                <div className='opacity-0 z-10 w-full h-full absolute bg-black ease-in-out duration-400 transition-opacity group-hover:opacity-50'>
-                    <p>Before</p>
-                    <p>After</p>
+                <div className='z-10 w-full h-full absolute bg-black/0 ease-in-out duration-400 transition-colors group-hover:bg-black/50'>
+                    <div className='absolute left-1.5 px-5 py-2.5 top-1/2 -translate-y-1/2 flex items-center bg-amber-50/20 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100' >
+                        <p>Before</p>
+                    </div>
+                    <div className='absolute right-1.5 px-5 py-2.5 top-1/2 -translate-y-1/2 flex items-center bg-amber-50/20 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100'>
+                        <p>After</p>
+                    </div>
                 </div>
               <Image
                 src={card.OriginalIMG}
@@ -49,7 +53,7 @@ const BeforeAfterImage = ({card}: {card:{OriginalIMG:string, NewIMG:string}}) =>
               />
             </div>
             <div className={`absolute w-11 h-11 top-[50%] -mt-5.5 -ml-5.5 border-solid border-[3px] border-white rounded-full z-40
-            after:content-[" "] before:bottom-[50%] before:mb-5.5 before:left-[50%] before:ml-[-1.5px] before:block before:bg-white before:absolute before:z-30 before:w-0.75 before:h-[9999px]
+            before:content-[" "] before:bottom-[50%] before:mb-5.5 before:left-[50%] before:ml-[-1.5px] before:block before:bg-white before:absolute before:z-30 before:w-0.75 before:h-[9999px]
             after:content-[" "] after:top-[50%] after:mt-5.5 after:left-[50%] after:ml-[-1.5px] after:block after:bg-white after:absolute after:z-30 after:w-0.75 after:h-[9999px]
             `}
             style={{left: `${sliderPosition}%`}}

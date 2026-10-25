@@ -10,7 +10,7 @@ export default async function Home() {
 
   return (
     <>
-      <section className='flex flex-col gap-y-2.5 gap-x-[2.5%] h-full flex-1 self-stretch mx-auto mb-5 max-md:w-[95%]'>
+      <section className='flex flex-col gap-y-2.5 gap-x-[2.5%] h-full flex-1 self-stretch mb-5 container test max-md:w-[95%]'>
         <div >
           <h1>Jon Bjarke Sørensen - Portfolio</h1>
         </div>
